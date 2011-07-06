@@ -10,6 +10,7 @@ mp3gain (1.5.2-r2-1) UNRELEASED; urgency=low
   * Added Vcs-*
   * Removed dpatch.make from d/rules.
   * Switch to DEP5 license format.
+  * Added txxx patch for extra ID3v2 replaygain tags. (Closes: #587465)
 
  -- Fabrizio Regalli <fabreg@fabreg.it>  Wed, 06 Jul 2011 15:45:03 +0200
 

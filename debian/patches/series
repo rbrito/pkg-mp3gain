@@ -1,0 +1,10 @@
+11_format_string_error.diff
+10_fix_potential_segfaults.diff
+09_fix_mem_leaks.diff
+08_trailingspace.diff
+07_fix_CFLAGS.diff
+06_fix_overwrite_query_loop.diff
+05_fix_segfault_when_files_not_writable.diff
+03_use_tempfile_by_default.diff
+02_correct_errorcode_on_failure.diff
+01_fix_installdir.diff

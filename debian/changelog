@@ -1,4 +1,4 @@
-mp3gain (1.5.2_r2-1) UNRELEASED; urgency=low
+mp3gain (1.5.2-r2-1) UNRELEASED; urgency=low
 
   * New upstream version.
   * Switch to quilt 3.0 format.

@@ -1,10 +1,8 @@
-#! /bin/sh /usr/share/dpatch/dpatch-run
-## 08_trailingspace.dpatch by  <az@debian.org>
-##
-## All lines beginning with `## DP:' are a description of the patch.
-## DP: when copying tags from v1, remove trailing spaces.
+Description: Fixing trailing space
+Author: Alexander Zangerl <az@debian.org>
+Last-Update: 2011-07-11
+Forwarded: no
 
-@DPATCH@
 --- a/id3tag.c
 +++ b/id3tag.c
 @@ -823,7 +823,7 @@

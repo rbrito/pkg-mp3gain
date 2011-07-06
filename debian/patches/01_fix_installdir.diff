@@ -1,10 +1,8 @@
-#! /bin/sh /usr/share/dpatch/dpatch-run
-## 01_fix_installdir.dpatch by Stefan Fritsch <sf@sfritsch.de>
-##
-## All lines beginning with `## DP:' are a description of the patch.
-## DP: use DESTDIR
+Description: Fixing install dir
+Author: Stefan Fritsch <sf@sfritsch.de>
+Last-Update: 2011-07-11
+Forwarded: no
 
-@DPATCH@
 --- a/Makefile
 +++ b/Makefile
 @@ -19,7 +19,7 @@

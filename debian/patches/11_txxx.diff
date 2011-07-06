@@ -1,10 +1,9 @@
-## 09_txxx.dpatch by Simon McVittie <smcv@debian.org>
-##
-## All lines beginning with `## DP:' are a description of the patch.
-## DP: in ID3 tags, produce TXXX frames compatible with Winamp, as well as
-## DP: the correct RVA2 frames
+Description: ID3 tags, produce TXXX frames compatible with Winamp,
+  the correct RVA2 frames           
+Author: Stefan Fritsch <sf@sfritsch.de>
+Last-Update: 2011-07-11
+Forwarded: https://sourceforge.net/tracker/?func=detail&aid=3022522&group_id=49979&atid=458158
 
-@DPATCH@
 --- a/id3tag.c
 +++ b/id3tag.c
 @@ -420,6 +420,71 @@

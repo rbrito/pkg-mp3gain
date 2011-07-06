@@ -1,3 +1,16 @@
+mp3gain (1.5.2_r2-1) UNRELEASED; urgency=low
+
+  * New upstream version.
+  * Switch to quilt 3.0 format.
+  * New maintainer. (Closes: #619847)
+  * Switch d/compat to 8.
+  * Update debhelper (>= 8).
+  * Removed dpatch from dependecies.
+  * Bump to Standards-Version: 3.9.2.
+  * Added Vcs-*
+
+ -- Fabrizio Regalli <fabreg@fabreg.it>  Wed, 06 Jul 2011 15:45:03 +0200
+
 mp3gain (1.5.1-4) unstable; urgency=low
 
   * Fix various potential segfaults found by cppcheck.

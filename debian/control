@@ -1,10 +1,12 @@
 Source: mp3gain
 Section: sound
 Priority: optional
-Maintainer: Stefan Fritsch <sf@debian.org>
-Build-Depends: debhelper (>= 7.0.0), docbook-to-man, dpatch
+Maintainer: Fabrizio Regalli <fabreg@fabreg.it>
+Build-Depends: debhelper (>= 8), docbook-to-man
 Homepage: http://mp3gain.sourceforge.net/
-Standards-Version: 3.9.1
+Standards-Version: 3.9.2
+Vcs-Git: git://anonscm.debian.org/collab-maint/mp3gain.git
+Vcs-Browser: http://anonscm.debian.org/git/collab-maint/mp3gain.git
 
 Package: mp3gain
 Architecture: any

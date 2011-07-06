@@ -336,7 +336,8 @@ int check_vbr_header(PMPSTR mp,int bytes)
 {
   int i,pos;
   struct buf *ibuf=mp->tail;
-  unsigned char xing[48];
+  /* GetVbrTag may read more than 48 bytes */
+  unsigned char xing[156] = {0};
   VBRTAGDATA pTagData;
 
   pos = ibuf->pos;
@@ -344,8 +345,8 @@ int check_vbr_header(PMPSTR mp,int bytes)
   for (i=0; i<bytes; ++i) {
     while(pos >= ibuf->size) {
       ibuf  = ibuf->next;
-      pos = ibuf->pos;
       if(!ibuf) 	return -1; /* fatal error */
+      pos = ibuf->pos;
     }
     ++pos;
   }
@@ -353,8 +354,8 @@ int check_vbr_header(PMPSTR mp,int bytes)
   for (i=0; i<48; ++i) {
     while(pos >= ibuf->size) {
       ibuf  = ibuf->next;
-      pos = ibuf->pos;
       if(!ibuf) 	return -1; /* fatal error */
+      pos = ibuf->pos;
     }
     xing[i] = ibuf->pnt[pos];
     ++pos;
@@ -396,11 +397,11 @@ int sync_buffer(PMPSTR mp,int free_match)
     b[0]=b[1]; b[1]=b[2]; b[2]=b[3];
     while(pos >= buff->size) {
       buff  = buff->next;
-      pos = buff->pos;
       if(!buff) {
 	return -1;
 	/* not enough data to read 4 bytes */
       }
+      pos = buff->pos;
     }
     b[3] = buff->pnt[pos];
     ++pos;

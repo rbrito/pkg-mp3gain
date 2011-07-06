@@ -17,6 +17,8 @@ endif
 
 
 build: build-stamp
+build-arch: build-stamp
+build-indep: build
 
 build-stamp:
 	dh_testdir

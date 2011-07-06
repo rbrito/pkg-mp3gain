@@ -1,12 +1,9 @@
-This package was debianized by Stefan Fritsch <sfritsch@ph.tum.de> on
-Wed,  4 Feb 2004 21:33:28 +0100.
+Format-Specification: http://svn.debian.org/wsvn/dep/web/deps/dep5.mdwn?op=file&rev=135
+Name: mp3gain
+Maintainer: Glen Sawyer <mp3gain@hotmail.com>
+Source: http://mp3gain.sourceforge.net/download.php
 
-Current maintainer email address is sf@sfritsch.de.
-
-It was downloaded from http://mp3gain.sourceforge.net/download.php
-
-Upstream Author: "Glen Sawyer" <mp3gain@hotmail.com>
-
+Files: *
 Copyright: 2001-2004 Glen Sawyer
            2002 John Zitterkopf
            2001 David Robinson
@@ -19,11 +16,14 @@ Copyright: 2001-2004 Glen Sawyer
 	   Artur Polaczynski
 	   Frank Klemm
 	   Mark Armbrust
+License: LGPL-1
+
+Files: debian/*
+Copyright: 2004, Stefan Fritsch <sfritsch@ph.tum.de>
+	   2011, Fabrizio Regalli <fabreg@fabreg.it>
+License: LGPL-1
 	 
-Concept and filter values by David Robinson	
-		
-
-
+License: LGPL-1
     This package is free software; you can redistribute it and/or
     modify it under the terms of the GNU Lesser General Public
     License as published by the Free Software Foundation; either

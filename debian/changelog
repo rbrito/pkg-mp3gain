@@ -9,6 +9,7 @@ mp3gain (1.5.2-r2-1) UNRELEASED; urgency=low
   * Bump to Standards-Version: 3.9.2.
   * Added Vcs-*
   * Removed dpatch.make from d/rules.
+  * Switch to DEP5 license format.
 
  -- Fabrizio Regalli <fabreg@fabreg.it>  Wed, 06 Jul 2011 15:45:03 +0200
 

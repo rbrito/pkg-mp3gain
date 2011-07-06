@@ -19,7 +19,7 @@ EXE_EXT =
 endif
 
 ifneq ($(OSTYPE),beos)
-INSTALL_PATH= $(DESTDIR)/usr/bin
+INSTALL_PATH= /usr/local/bin
 else
 INSTALL_PATH= $(HOME)/config/bin
 endif

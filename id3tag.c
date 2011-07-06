@@ -823,7 +823,7 @@ static int id3_write_tag(FILE *f, struct ID3v2TagStruct *tag)
 static int id3_parse_v1_tag(FILE *f, struct ID3v2TagStruct *tag)
 {
 	unsigned char buf[128];
-	char sbuf[32],*p;
+	char sbuf[32];
 
 	struct ID3v2FrameStruct **pframe;
 
@@ -850,8 +850,6 @@ static int id3_parse_v1_tag(FILE *f, struct ID3v2TagStruct *tag)
 	if (buf[3] != '\0') {
 		memcpy(sbuf, buf + 3, 30);
 		sbuf[30] = '\0';
-		/* get rid of trailing spaces */
-		for(p=sbuf+29; *p==' ' && p>=sbuf; *p--='\0');
 		*pframe = id3_make_frame("TIT2", "bs", 0, sbuf);
 		pframe = &((*pframe)->next);
 	}
@@ -860,9 +858,6 @@ static int id3_parse_v1_tag(FILE *f, struct ID3v2TagStruct *tag)
 	if (buf[33] != '\0') {
 		memcpy(sbuf, buf + 33, 30);
 		sbuf[30] = '\0';
-		/* get rid of trailing spaces */
-		for(p=sbuf+29; *p==' ' && p>=sbuf; *p--='\0');
-		DBG(("fixed v1 artist: \"%s\"\n",sbuf));
 		*pframe = id3_make_frame("TPE1", "bs", 0, sbuf);
 		pframe = &((*pframe)->next);
 	}
@@ -871,8 +866,6 @@ static int id3_parse_v1_tag(FILE *f, struct ID3v2TagStruct *tag)
 	if (buf[63] != '\0') {
 		memcpy(sbuf, buf + 63, 30);
 		sbuf[30] = '\0';
-		/* get rid of trailing spaces */
-		for(p=sbuf+29; *p==' ' && p>=sbuf; *p--='\0');
 		*pframe = id3_make_frame("TALB", "bs", 0, sbuf);
 		pframe = &((*pframe)->next);
 	}
@@ -892,8 +885,6 @@ static int id3_parse_v1_tag(FILE *f, struct ID3v2TagStruct *tag)
 	if (buf[97] != '\0') {
 		memcpy(sbuf, buf + 97, 30);
 		sbuf[30] = '\0';
-		/* get rid of trailing spaces */
-		for(p=sbuf+29; *p==' ' && p>=sbuf; *p--='\0');
 		/* assume ISO-8859-1, unknown language, no description */
 		*pframe = id3_make_frame("COMM", "bssbs", 0, "XXX", "", 0, sbuf);
 		pframe = &((*pframe)->next);

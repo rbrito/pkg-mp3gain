@@ -5,11 +5,10 @@
 ## DP: use DESTDIR
 
 @DPATCH@
-diff -urNad mp3gain-1.4.6~/Makefile mp3gain-1.4.6/Makefile
---- mp3gain-1.4.6~/Makefile	2006-04-06 22:22:35.000000000 +0200
-+++ mp3gain-1.4.6/Makefile	2006-04-06 22:36:29.000000000 +0200
-@@ -9,7 +9,7 @@
- CFLAGS= -Wall -O3 -DHAVE_MEMCPY
+--- a/Makefile
++++ b/Makefile
+@@ -19,7 +19,7 @@
+ endif
  
  ifneq ($(OSTYPE),beos)
 -INSTALL_PATH= /usr/local/bin

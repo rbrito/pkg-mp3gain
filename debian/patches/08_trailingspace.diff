@@ -5,9 +5,8 @@
 ## DP: when copying tags from v1, remove trailing spaces.
 
 @DPATCH@
-diff -urNad mp3gain-1.5.1~/id3tag.c mp3gain-1.5.1/id3tag.c
---- mp3gain-1.5.1~/id3tag.c	2009-06-29 14:01:34.000000000 +0200
-+++ mp3gain-1.5.1/id3tag.c	2010-01-10 08:21:41.272091362 +0100
+--- a/id3tag.c
++++ b/id3tag.c
 @@ -823,7 +823,7 @@
  static int id3_parse_v1_tag(FILE *f, struct ID3v2TagStruct *tag)
  {

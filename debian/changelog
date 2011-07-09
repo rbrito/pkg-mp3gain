@@ -1,5 +1,6 @@
 mp3gain (1.5.2-r2-1) UNRELEASED; urgency=low
 
+  [ Fabrizio Regalli ]
   * New upstream version.
   * Switch to quilt 3.0 format.
   * New maintainer. (Closes: #619847)
@@ -11,6 +12,9 @@ mp3gain (1.5.2-r2-1) UNRELEASED; urgency=low
   * Removed dpatch.make from d/rules.
   * Switch to DEP5 license format.
   * Added txxx patch for extra ID3v2 replaygain tags. (Closes: #587465)
+
+  [ Simon McVittie ]
+  * Correctly credit myself, not Stefan, for my TXXX patch :-)
 
  -- Fabrizio Regalli <fabreg@fabreg.it>  Wed, 06 Jul 2011 15:45:03 +0200
 

@@ -16,14 +16,14 @@ Copyright: 2001-2004 Glen Sawyer
 	   Artur Polaczynski
 	   Frank Klemm
 	   Mark Armbrust
-License: LGPL-1
+License: LGPL-2+
 
 Files: debian/*
 Copyright: 2004, Stefan Fritsch <sfritsch@ph.tum.de>
 	   2011, Fabrizio Regalli <fabreg@fabreg.it>
-License: LGPL-1
+License: LGPL-2+
 	 
-License: LGPL-1
+License: LGPL-2+
     This package is free software; you can redistribute it and/or
     modify it under the terms of the GNU Lesser General Public
     License as published by the Free Software Foundation; either
@@ -40,5 +40,5 @@ License: LGPL-1
     USA.
 
 On Debian systems, the complete text of the GNU Lesser General
-Public License can be found in `/usr/share/common-licenses/LGPL-1'.
+Public License can be found in `/usr/share/common-licenses/LGPL-2'.
 

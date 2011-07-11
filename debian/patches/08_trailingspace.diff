@@ -3,6 +3,8 @@ Author: Alexander Zangerl <az@debian.org>
 Last-Update: 2011-07-11
 Forwarded: no
 
+Bug-Debian: http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=564308
+
 --- a/id3tag.c
 +++ b/id3tag.c
 @@ -823,7 +823,7 @@

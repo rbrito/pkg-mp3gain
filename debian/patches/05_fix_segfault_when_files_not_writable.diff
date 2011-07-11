@@ -2,6 +2,8 @@ From: Stefan Fritsch <sf@sfritsch.de>
 Date: 2007-09-29 11:12:27 +0200
 Subject: Fix segfault when files are not writable
 
+Bug-Debian: http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=444373
+
 diff -urNad mp3gain-1.4.6~/mp3gain.c mp3gain-1.4.6/mp3gain.c
 --- mp3gain-1.4.6~/mp3gain.c	2007-09-29 11:11:15.792120650 +0200
 +++ mp3gain-1.4.6/mp3gain.c	2007-09-29 11:12:27.580211620 +0200

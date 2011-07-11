@@ -2,6 +2,8 @@ From: Stefan Fritsch <sf@sfritsch.de>
 Subject: don't return 0 on error
 Date: 2009-07-24 15:23:32 +0200
 
+Bug-Debian: http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=433757
+
 diff -urNad mp3gain-1.5.1~/mp3gain.c mp3gain-1.5.1/mp3gain.c
 --- mp3gain-1.5.1~/mp3gain.c	2009-07-24 13:57:12.000000000 +0200
 +++ mp3gain-1.5.1/mp3gain.c	2009-07-24 15:23:32.065420323 +0200

@@ -1,8 +1,11 @@
-Description: in ID3 tags, produce TXXX frames compatible with Winamp, as well
+From: Simon McVittie <smcv@debian.org>
+Subject: in ID3 tags, produce TXXX frames compatible with Winamp, as well
   as the correct RVA2 frames
-Author: Simon McVittie <smcv@debian.org>
+
 Last-Update: 2011-07-11
-Forwarded: https://sourceforge.net/tracker/?func=detail&aid=3022522&group_id=49979&atid=458158
+Bug: https://sourceforge.net/tracker/?func=detail&aid=3022522&group_id=49979&atid=458158
+Bug-Debian: http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=587466
+Forwarded: yes
 
 --- a/id3tag.c
 +++ b/id3tag.c

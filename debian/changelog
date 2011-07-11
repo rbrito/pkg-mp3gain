@@ -1,4 +1,4 @@
-mp3gain (1.5.2-r2-1) UNRELEASED; urgency=low
+mp3gain (1.5.2-r2-1) unstable; urgency=low
 
   [ Fabrizio Regalli ]
   * New upstream version.
@@ -22,7 +22,7 @@ mp3gain (1.5.2-r2-1) UNRELEASED; urgency=low
     despite DOS line endings
   * Override installation path when running make, not by patching Makefile
 
- -- Fabrizio Regalli <fabreg@fabreg.it>  Wed, 06 Jul 2011 15:45:03 +0200
+ -- Simon McVittie <smcv@debian.org>  Mon, 11 Jul 2011 21:45:45 +0100
 
 mp3gain (1.5.1-4) unstable; urgency=low
 

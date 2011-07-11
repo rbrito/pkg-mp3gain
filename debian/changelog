@@ -16,8 +16,7 @@ mp3gain (1.5.2-r2-1) UNRELEASED; urgency=low
   [ Simon McVittie ]
   * Correctly credit myself, not Stefan, for my TXXX patch :-)
   * Change machine-readable license from LGPL-1 to LGPL-2+ to match the text
-    of the license grant
-    (Fabrizio, please confirm that your changes can be released under LGPL-2+?)
+    of the license grant (Fabrizio gave permission for this in an email)
   * Add myself to Uploaders
 
  -- Fabrizio Regalli <fabreg@fabreg.it>  Wed, 06 Jul 2011 15:45:03 +0200

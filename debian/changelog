@@ -20,6 +20,7 @@ mp3gain (1.5.2-r2-1) UNRELEASED; urgency=low
   * Add myself to Uploaders
   * Reinstate most of Stefan's patches, adjusted to apply to mp3gain.c
     despite DOS line endings
+  * Override installation path when running make, not by patching Makefile
 
  -- Fabrizio Regalli <fabreg@fabreg.it>  Wed, 06 Jul 2011 15:45:03 +0200
 

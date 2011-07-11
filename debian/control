@@ -2,6 +2,7 @@ Source: mp3gain
 Section: sound
 Priority: optional
 Maintainer: Fabrizio Regalli <fabreg@fabreg.it>
+Uploaders: Simon McVittie <smcv@debian.org>
 Build-Depends: debhelper (>= 8), docbook-to-man
 Homepage: http://mp3gain.sourceforge.net/
 Standards-Version: 3.9.2

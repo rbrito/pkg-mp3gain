@@ -1,3 +1,10 @@
+mp3gain (1.5.2-r2-2) UNRELEASED; urgency=low
+
+  * Specifically enable pristine-tar when using git-buildpackage for this
+    package
+
+ -- Simon McVittie <smcv@debian.org>  Sat, 23 Jul 2011 19:07:08 +0100
+
 mp3gain (1.5.2-r2-1) unstable; urgency=low
 
   [ Fabrizio Regalli ]

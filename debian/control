@@ -7,7 +7,7 @@ Build-Depends: debhelper (>= 8), docbook-to-man
 Homepage: http://mp3gain.sourceforge.net/
 Standards-Version: 3.9.2
 Vcs-Git: git://anonscm.debian.org/collab-maint/mp3gain.git
-Vcs-Browser: http://anonscm.debian.org/git/collab-maint/mp3gain.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/mp3gain.git
 
 Package: mp3gain
 Architecture: any

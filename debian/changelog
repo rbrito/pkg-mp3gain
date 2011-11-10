@@ -1,7 +1,11 @@
 mp3gain (1.5.2-r2-2) UNRELEASED; urgency=low
 
+  [ Simon McVittie ]
   * Specifically enable pristine-tar when using git-buildpackage for this
     package
+
+  [ Fabrizio Regalli ]
+  * Fixed Vcs-Browser field in d/control. 
 
  -- Simon McVittie <smcv@debian.org>  Sat, 23 Jul 2011 19:07:08 +0100
 

@@ -1,6 +1,6 @@
-Format-Specification: http://svn.debian.org/wsvn/dep/web/deps/dep5.mdwn?op=file&rev=135
-Name: mp3gain
-Maintainer: Glen Sawyer <mp3gain@hotmail.com>
+Format: http://svn.debian.org/wsvn/dep/web/deps/dep5.mdwn?op=file&rev=174
+Upstream-Name: mp3gain
+Upstream-Contact: Glen Sawyer <mp3gain@hotmail.com>
 Source: http://mp3gain.sourceforge.net/download.php
 
 Files: *

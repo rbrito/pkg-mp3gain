@@ -9,7 +9,7 @@ Forwarded: yes
 
 --- a/id3tag.c
 +++ b/id3tag.c
-@@ -420,6 +420,71 @@
+@@ -422,6 +422,71 @@
  
  
  /**
@@ -81,7 +81,7 @@ Forwarded: yes
   * Decode a mp3gain-specific TXXX frame, either "MP3GAIN_UNDO" or
   * "MP3GAIN_MINMAX" or "MP3GAIN_ALBUM_MINMAX".
   *
-@@ -1087,6 +1152,7 @@
+@@ -1089,6 +1154,7 @@
  		frame = tag.frames;
  		while (frame) {
  			id3_decode_rva2_frame(frame, info);
@@ -89,7 +89,7 @@ Forwarded: yes
  			id3_decode_mp3gain_frame(frame, info);
  			frame = frame->next;
  		}
-@@ -1157,6 +1223,7 @@
+@@ -1159,6 +1225,7 @@
  	pframe = &(tag.frames);
  	while ((frame = *pframe)) {
  		if (id3_decode_rva2_frame(frame, NULL) == 1 ||
@@ -97,7 +97,7 @@ Forwarded: yes
  		    id3_decode_mp3gain_frame(frame, NULL) == 1) {
  			/* This is a ReplayGain frame; kill it. */
  			need_update = 1;
-@@ -1168,18 +1235,53 @@
+@@ -1170,18 +1237,53 @@
  		}
  	}
  

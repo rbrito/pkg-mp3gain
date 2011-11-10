@@ -6,10 +6,9 @@ Using a tempfile is a lot faster than direct writes on ReiserFS
 and has no disadvantages besides diskspace usage.
 We make it the default and let -T restore the old behaviour.
 
-diff -urNad mp3gain-1.5.1~/mp3gain.c mp3gain-1.5.1/mp3gain.c
---- mp3gain-1.5.1~/mp3gain.c	2009-07-24 15:28:57.950388245 +0200
-+++ mp3gain-1.5.1/mp3gain.c	2009-07-24 15:30:31.702394680 +0200
-@@ -129,7 +132,7 @@
+--- a/mp3gain.c
++++ b/mp3gain.c
+@@ -129,7 +129,7 @@
  
  int writeself = 0;
  int QuietMode = 0;
@@ -18,7 +17,7 @@ diff -urNad mp3gain-1.5.1~/mp3gain.c mp3gain-1.5.1/mp3gain.c
  int NowWriting = 0;
  double lastfreq = -1.0;
  
-@@ -1045,7 +1048,7 @@
+@@ -1045,7 +1045,7 @@
              deleteFile(outfilename);
  			passError( MP3GAIN_UNSPECIFED_ERROR, 3,
                  "Not enough temp space on disk to modify ", filename, 
@@ -27,7 +26,7 @@ diff -urNad mp3gain-1.5.1~/mp3gain.c mp3gain-1.5.1/mp3gain.c
              return M3G_ERR_NOT_ENOUGH_TMP_SPACE;
          }
          else {
-@@ -1326,10 +1329,11 @@
+@@ -1327,10 +1327,11 @@
  		fprintf(stderr,"\t%cd <n> - modify suggested dB gain by floating-point n\n",SWITCH_CHAR);
  		fprintf(stderr,"\t%cc - ignore clipping warning when applying gain\n",SWITCH_CHAR);
  		fprintf(stderr,"\t%co - output is a database-friendly tab-delimited list\n",SWITCH_CHAR);
@@ -42,7 +41,7 @@ diff -urNad mp3gain-1.5.1~/mp3gain.c mp3gain-1.5.1/mp3gain.c
  #endif
  		fprintf(stderr,"\t%cq - Quiet mode: no status messages\n",SWITCH_CHAR);
  		fprintf(stderr,"\t%cp - Preserve original file timestamp\n",SWITCH_CHAR);
-@@ -1673,10 +1677,13 @@
+@@ -1675,10 +1676,13 @@
                      break;
  
  				case 't':

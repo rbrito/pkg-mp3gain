@@ -1,3 +1,10 @@
+mp3gain (1.5.2-r2-3) UNRELEASED; urgency=medium
+
+  * Update debian/watch to a version by Bart Martens to deal with the upstream
+    file-naming convention
+
+ -- Simon McVittie <smcv@debian.org>  Sun, 19 Jan 2014 00:09:36 +0000
+
 mp3gain (1.5.2-r2-2) unstable; urgency=low
 
   [ Simon McVittie ]

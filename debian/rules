@@ -4,15 +4,8 @@
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
-
-CFLAGS = -Wall -g
-export CFLAGS
-
-ifneq (,$(findstring noopt,$(DEB_BUILD_OPTIONS)))
-	CFLAGS += -O0
-else
-	CFLAGS += -O3
-endif
+DPKG_EXPORT_BUILDFLAGS=1
+include /usr/share/dpkg/default.mk
 
 make_vars = \
 	INSTALL_PATH='$$(DESTDIR)/usr/bin'

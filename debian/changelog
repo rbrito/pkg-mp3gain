@@ -4,6 +4,7 @@ mp3gain (1.5.2-r2-3) UNRELEASED; urgency=medium
     file-naming convention
   * Use dpkg-recommended build flags
   * 13_constant_expr.diff: use constant expressions to size arrays
+  * Standards-Version: 3.9.5 (no changes needed)
 
  -- Simon McVittie <smcv@debian.org>  Sun, 19 Jan 2014 00:09:36 +0000
 

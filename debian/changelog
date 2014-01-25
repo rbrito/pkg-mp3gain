@@ -1,4 +1,4 @@
-mp3gain (1.5.2-r2-3) UNRELEASED; urgency=medium
+mp3gain (1.5.2-r2-3) unstable; urgency=medium
 
   * Update debian/watch to a version by Bart Martens to deal with the upstream
     file-naming convention
@@ -6,7 +6,7 @@ mp3gain (1.5.2-r2-3) UNRELEASED; urgency=medium
   * 13_constant_expr.diff: use constant expressions to size arrays
   * Standards-Version: 3.9.5 (no changes needed)
 
- -- Simon McVittie <smcv@debian.org>  Sun, 19 Jan 2014 00:09:36 +0000
+ -- Simon McVittie <smcv@debian.org>  Sat, 25 Jan 2014 13:03:44 +0000
 
 mp3gain (1.5.2-r2-2) unstable; urgency=low
 

@@ -1,3 +1,10 @@
+mp3gain (1.5.2-r2-4) unstable; urgency=high
+
+  * Build with -fsanitize=address to catch stack buffer overflows
+    (mitigates: #740268)
+
+ -- Simon McVittie <smcv@debian.org>  Mon, 10 Mar 2014 09:42:23 +0000
+
 mp3gain (1.5.2-r2-3) unstable; urgency=medium
 
   * Update debian/watch to a version by Bart Martens to deal with the upstream

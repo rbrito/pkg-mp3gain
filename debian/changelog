@@ -1,3 +1,14 @@
+mp3gain (1.5.2-r2-6) UNRELEASED; urgency=high
+
+  * Add various patches from Daniel Kobras' mpg123 packaging to fix
+    buffer overflows in the embedded copy/fork of mpglib
+    - CVE-2004-0805 (originally #270542 in mpg123)
+    - CVE-2004-0991
+    - CVE-2006-1655 (originally #361863 in mpg123)
+    (Closes: #740268, hopefully)
+
+ -- Simon McVittie <smcv@debian.org>  Sun, 16 Mar 2014 22:13:57 +0000
+
 mp3gain (1.5.2-r2-5) unstable; urgency=high
 
   * Only build with -fsanitize=address on Linux with amd64, i386, armel,

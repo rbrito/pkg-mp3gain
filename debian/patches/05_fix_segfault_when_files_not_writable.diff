@@ -1,12 +1,17 @@
 From: Stefan Fritsch <sf@sfritsch.de>
-Date: 2007-09-29 11:12:27 +0200
+Date: Sat, 29 Sep 2007 11:12:27 +0200
 Subject: Fix segfault when files are not writable
 
 Bug-Debian: http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=444373
+---
+ mp3gain.c | 12 +++++++++++-
+ 1 file changed, 11 insertions(+), 1 deletion(-)
 
+diff --git a/mp3gain.c b/mp3gain.c
+index 14d43e0..2573440 100644
 --- a/mp3gain.c
 +++ b/mp3gain.c
-@@ -761,6 +761,7 @@
+@@ -761,6 +761,7 @@ int changeGain(char *filename AACGAIN_ARG(AACGainHandle aacH), int leftgainchang
  			inf = NULL;
              passError(MP3GAIN_UNSPECIFED_ERROR, 3,
                  "\nCan't open ", outfilename, " for temp writing\n");
@@ -14,7 +19,7 @@ Bug-Debian: http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=444373
  			return M3G_ERR_CANT_MAKE_TMP;
  		} 
   
-@@ -771,10 +772,13 @@
+@@ -771,10 +772,13 @@ int changeGain(char *filename AACGAIN_ARG(AACGainHandle aacH), int leftgainchang
    }
  
    if (inf == NULL) {
@@ -29,7 +34,7 @@ Bug-Debian: http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=444373
  	  return M3G_ERR_CANT_MODIFY_FILE;
    }
    else {
-@@ -967,6 +971,7 @@
+@@ -967,6 +971,7 @@ int changeGain(char *filename AACGAIN_ARG(AACGainHandle aacH), int leftgainchang
  		fclose(inf);
  		if (UsingTemp) {
  			fclose(outf);
@@ -37,7 +42,7 @@ Bug-Debian: http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=444373
  			deleteFile(outfilename);
  			free(outfilename);
  			passError(MP3GAIN_CANCELLED,2,"Cancelled processing of ",filename);
-@@ -976,6 +981,7 @@
+@@ -976,6 +981,7 @@ int changeGain(char *filename AACGAIN_ARG(AACGainHandle aacH), int leftgainchang
  		}
  		if (saveTime) 
  		  fileTime(filename, setStoredTime);		
@@ -45,7 +50,7 @@ Bug-Debian: http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=444373
  		return;
  	}
  #endif
-@@ -1040,12 +1046,14 @@
+@@ -1040,12 +1046,14 @@ int changeGain(char *filename AACGAIN_ARG(AACGainHandle aacH), int leftgainchang
  		fclose(outf);
  		fclose(inf);
  		inf = NULL;
@@ -60,7 +65,7 @@ Bug-Debian: http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=444373
              return M3G_ERR_NOT_ENOUGH_TMP_SPACE;
          }
          else {
-@@ -1054,6 +1062,7 @@
+@@ -1054,6 +1062,7 @@ int changeGain(char *filename AACGAIN_ARG(AACGainHandle aacH), int leftgainchang
  				deleteFile(outfilename); //try to delete tmp file
  				passError( MP3GAIN_UNSPECIFED_ERROR, 3,
                      "Can't open ", filename, " for modifying\n");
@@ -68,7 +73,7 @@ Bug-Debian: http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=444373
  			    return M3G_ERR_CANT_MODIFY_FILE;
  		    }
  		    if (moveFile(outfilename, filename)) {
-@@ -1062,6 +1071,7 @@
+@@ -1062,6 +1071,7 @@ int changeGain(char *filename AACGAIN_ARG(AACGainHandle aacH), int leftgainchang
                      "\nThe mp3 was correctly modified, but you will need to re-name ", 
                      outfilename, " to ", filename, 
                      " yourself.\n");

@@ -1,15 +1,22 @@
 From: Simon McVittie <smcv@debian.org>
-Subject: in ID3 tags, produce TXXX frames compatible with Winamp, as well
-  as the correct RVA2 frames
+Date: Mon, 28 Jun 2010 22:14:25 +0100
+Subject: in ID3 tags, produce TXXX frames compatible with Winamp,
+ as well as the correct RVA2 frames
 
 Last-Update: 2011-07-11
 Bug: https://sourceforge.net/tracker/?func=detail&aid=3022522&group_id=49979&atid=458158
+Bug: http://sourceforge.net/p/mp3gain/bugs/31/
 Bug-Debian: http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=587466
 Forwarded: yes
+---
+ id3tag.c | 104 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-
+ 1 file changed, 103 insertions(+), 1 deletion(-)
 
+diff --git a/id3tag.c b/id3tag.c
+index 2125f21..20f71cb 100644
 --- a/id3tag.c
 +++ b/id3tag.c
-@@ -422,6 +422,71 @@
+@@ -422,6 +422,71 @@ static struct ID3v2FrameStruct * id3_make_rva2_frame(int is_album_gain, double g
  
  
  /**
@@ -81,7 +88,7 @@ Forwarded: yes
   * Decode a mp3gain-specific TXXX frame, either "MP3GAIN_UNDO" or
   * "MP3GAIN_MINMAX" or "MP3GAIN_ALBUM_MINMAX".
   *
-@@ -1089,6 +1154,7 @@
+@@ -1089,6 +1154,7 @@ int ReadMP3GainID3Tag(char *filename, struct MP3GainTagInfo *info)
  		frame = tag.frames;
  		while (frame) {
  			id3_decode_rva2_frame(frame, info);
@@ -89,7 +96,7 @@ Forwarded: yes
  			id3_decode_mp3gain_frame(frame, info);
  			frame = frame->next;
  		}
-@@ -1159,6 +1225,7 @@
+@@ -1159,6 +1225,7 @@ int WriteMP3GainID3Tag(char *filename, struct MP3GainTagInfo *info, int saveTime
  	pframe = &(tag.frames);
  	while ((frame = *pframe)) {
  		if (id3_decode_rva2_frame(frame, NULL) == 1 ||
@@ -97,7 +104,7 @@ Forwarded: yes
  		    id3_decode_mp3gain_frame(frame, NULL) == 1) {
  			/* This is a ReplayGain frame; kill it. */
  			need_update = 1;
-@@ -1170,18 +1237,53 @@
+@@ -1170,18 +1237,53 @@ int WriteMP3GainID3Tag(char *filename, struct MP3GainTagInfo *info, int saveTime
  		}
  	}
  

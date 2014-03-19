@@ -1,13 +1,19 @@
-Description: Fixing trailing space
-Author: Alexander Zangerl <az@debian.org>
+From: Alexander Zangerl <az@debian.org>
+Date: Mon, 11 Jul 2011 00:00:00 +0000
+Subject: Fixing trailing space
+
 Last-Update: 2011-07-11
 Forwarded: no
-
 Bug-Debian: http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=564308
+---
+ id3tag.c | 11 ++++++++++-
+ 1 file changed, 10 insertions(+), 1 deletion(-)
 
+diff --git a/id3tag.c b/id3tag.c
+index c32b582..48636ec 100644
 --- a/id3tag.c
 +++ b/id3tag.c
-@@ -823,7 +823,7 @@
+@@ -823,7 +823,7 @@ static int id3_write_tag(FILE *f, struct ID3v2TagStruct *tag)
  static int id3_parse_v1_tag(FILE *f, struct ID3v2TagStruct *tag)
  {
  	unsigned char buf[128];
@@ -16,7 +22,7 @@ Bug-Debian: http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=564308
  
  	struct ID3v2FrameStruct **pframe;
  
-@@ -850,6 +850,8 @@
+@@ -850,6 +850,8 @@ static int id3_parse_v1_tag(FILE *f, struct ID3v2TagStruct *tag)
  	if (buf[3] != '\0') {
  		memcpy(sbuf, buf + 3, 30);
  		sbuf[30] = '\0';
@@ -25,7 +31,7 @@ Bug-Debian: http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=564308
  		*pframe = id3_make_frame("TIT2", "bs", 0, sbuf);
  		pframe = &((*pframe)->next);
  	}
-@@ -858,6 +860,9 @@
+@@ -858,6 +860,9 @@ static int id3_parse_v1_tag(FILE *f, struct ID3v2TagStruct *tag)
  	if (buf[33] != '\0') {
  		memcpy(sbuf, buf + 33, 30);
  		sbuf[30] = '\0';
@@ -35,7 +41,7 @@ Bug-Debian: http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=564308
  		*pframe = id3_make_frame("TPE1", "bs", 0, sbuf);
  		pframe = &((*pframe)->next);
  	}
-@@ -866,6 +871,8 @@
+@@ -866,6 +871,8 @@ static int id3_parse_v1_tag(FILE *f, struct ID3v2TagStruct *tag)
  	if (buf[63] != '\0') {
  		memcpy(sbuf, buf + 63, 30);
  		sbuf[30] = '\0';
@@ -44,7 +50,7 @@ Bug-Debian: http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=564308
  		*pframe = id3_make_frame("TALB", "bs", 0, sbuf);
  		pframe = &((*pframe)->next);
  	}
-@@ -885,6 +892,8 @@
+@@ -885,6 +892,8 @@ static int id3_parse_v1_tag(FILE *f, struct ID3v2TagStruct *tag)
  	if (buf[97] != '\0') {
  		memcpy(sbuf, buf + 97, 30);
  		sbuf[30] = '\0';

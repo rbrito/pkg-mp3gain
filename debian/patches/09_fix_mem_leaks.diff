@@ -1,10 +1,17 @@
 From: Stefan Fritsch <sf@debian.org>
+Date: Wed, 21 Apr 2010 00:36:31 +0200
 Subject: fix some issues found by cppcheck
-Date: 2010-04-21 00:36:31 +0200
 
+---
+ id3tag.c  | 2 ++
+ mp3gain.c | 2 ++
+ 2 files changed, 4 insertions(+)
+
+diff --git a/id3tag.c b/id3tag.c
+index 48636ec..2125f21 100644
 --- a/id3tag.c
 +++ b/id3tag.c
-@@ -303,6 +303,8 @@
+@@ -303,6 +303,8 @@ static struct ID3v2FrameStruct * id3_make_frame(const char *frameid, const char
  				break;
  			default:
  				va_end(ap);
@@ -13,9 +20,11 @@ Date: 2010-04-21 00:36:31 +0200
  				return NULL;
  		}
  	}
+diff --git a/mp3gain.c b/mp3gain.c
+index eeaebe9..f0dad9f 100644
 --- a/mp3gain.c
 +++ b/mp3gain.c
-@@ -762,6 +762,7 @@
+@@ -762,6 +762,7 @@ int changeGain(char *filename AACGAIN_ARG(AACGainHandle aacH), int leftgainchang
              passError(MP3GAIN_UNSPECIFED_ERROR, 3,
                  "\nCan't open ", outfilename, " for temp writing\n");
  			NowWriting = 0;
@@ -23,7 +32,7 @@ Date: 2010-04-21 00:36:31 +0200
  			return M3G_ERR_CANT_MAKE_TMP;
  		} 
   
-@@ -779,6 +780,7 @@
+@@ -779,6 +780,7 @@ int changeGain(char *filename AACGAIN_ARG(AACGainHandle aacH), int leftgainchang
  	  passError( MP3GAIN_UNSPECIFED_ERROR, 3,
            "\nCan't open ", filename, " for modifying\n");
  	  NowWriting = 0;

@@ -1,6 +1,6 @@
 From: Simon McVittie <smcv@debian.org>
 Date: Sun, 19 Jan 2014 00:33:02 +0000
-Subject: [PATCH] Use integer constant expressions for array sizes
+Subject: Use integer constant expressions for array sizes
 
 ISO C requires it, and gcc warns. The scale factors cancel out:
     kHz * ms = 1000 Hz * (1/1000) s = Hz * s

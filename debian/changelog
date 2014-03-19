@@ -1,4 +1,4 @@
-mp3gain (1.5.2-r2-6) UNRELEASED; urgency=high
+mp3gain (1.5.2-r2-6) unstable; urgency=high
 
   * Add various patches from Daniel Kobras' mpg123 packaging to fix
     buffer overflows in the embedded copy/fork of mpglib
@@ -11,7 +11,7 @@ mp3gain (1.5.2-r2-6) UNRELEASED; urgency=high
   * debian/patches/*.diff: update Sourceforge bug URLs to new layout
     (but keep the old versions for posterity)
 
- -- Simon McVittie <smcv@debian.org>  Sun, 16 Mar 2014 22:13:57 +0000
+ -- Simon McVittie <smcv@debian.org>  Wed, 19 Mar 2014 09:24:09 +0000
 
 mp3gain (1.5.2-r2-5) unstable; urgency=high
 

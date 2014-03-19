@@ -1,3 +1,15 @@
+mp3gain (1.5.2-r2-2+deb7u1) wheezy-security; urgency=high
+
+  * Add various patches from Daniel Kobras' mpg123 packaging to fix
+    buffer overflows in the embedded copy/fork of mpglib
+    - CVE-2003-0577 (originally #201698 in mpg123)
+    - CVE-2004-0805 (originally #270542 in mpg123)
+    - CVE-2004-0991
+    - CVE-2006-1655 (originally #361863 in mpg123)
+    (Closes: #740268, hopefully)
+
+ -- Simon McVittie <smcv@debian.org>  Wed, 19 Mar 2014 09:19:58 +0000
+
 mp3gain (1.5.2-r2-2) unstable; urgency=low
 
   [ Simon McVittie ]

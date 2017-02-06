@@ -2,8 +2,11 @@ Source: mp3gain
 Section: sound
 Priority: optional
 Maintainer: Fabrizio Regalli <fabreg@fabreg.it>
-Uploaders: Simon McVittie <smcv@debian.org>
-Build-Depends: debhelper (>= 8), docbook-to-man
+Uploaders:
+ Simon McVittie <smcv@debian.org>
+Build-Depends:
+ debhelper (>= 8),
+ docbook-to-man
 Homepage: http://mp3gain.sourceforge.net/
 Standards-Version: 3.9.5
 Vcs-Git: git://anonscm.debian.org/collab-maint/mp3gain.git
@@ -11,7 +14,9 @@ Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/mp3gain.git
 
 Package: mp3gain
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends}
 Description: Lossless mp3 normalizer with statistical analysis
  MP3Gain analyzes and adjusts mp3 files so that they have the same volume.
  MP3Gain does not just do peak normalization, as many normalizers do. Instead,

@@ -9,8 +9,8 @@ Build-Depends:
  docbook-to-man
 Homepage: http://mp3gain.sourceforge.net/
 Standards-Version: 3.9.5
-Vcs-Git: https//github.com/rbrito/pkg-mp3gain
-Vcs-Browser: https//github.com/rbrito/pkg-mp3gain
+Vcs-Git: https://github.com/rbrito/pkg-mp3gain
+Vcs-Browser: https://github.com/rbrito/pkg-mp3gain
 
 Package: mp3gain
 Architecture: any

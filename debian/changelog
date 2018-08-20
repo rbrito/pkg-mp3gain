@@ -1,11 +1,17 @@
-mp3gain (1.5.2-r2-7~1.gbp8b2f25) UNRELEASED; urgency=medium
+mp3gain (1.5.2-r2-7~2.gbpc8562e) UNRELEASED; urgency=medium
 
-  ** SNAPSHOT build @8b2f2529301a5b151ee539dd5ad9664e0f149c75 **
+  ** SNAPSHOT build @c8562e0d4aed5ba820bf0d62142b595f3a9a35e4 **
 
   * Run `wrap-and-sort -s -a -v` to normalize the files.
   * debian/{compat,control}: Bump debhelper compat to version 10.
+  * Initiate new release.
+  * debian/control: Change the Vcs-* URLs to their new place.
+  * debian/{changelog,rules}: Remove trailing whitespace.
+  * debian/rules: Fix syntax error in Vcs-* fields.
+  * debian/{compat,control}: Update debhelper compat to 11.
+  * debian/watch: Use HTTPS for privacy purposes.
 
- -- Rogério Brito <rbrito@ime.usp.br>  Wed, 01 Nov 2017 19:28:02 -0200
+ -- Rogério Brito <rbrito@ime.usp.br>  Sun, 19 Aug 2018 23:37:35 -0300
 
 mp3gain (1.5.2-r2-6) unstable; urgency=high
 

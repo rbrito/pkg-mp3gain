@@ -5,7 +5,7 @@ Maintainer: Fabrizio Regalli <fabreg@fabreg.it>
 Uploaders:
  Simon McVittie <smcv@debian.org>
 Build-Depends:
- debhelper (>= 10),
+ debhelper (>= 11),
  docbook-to-man
 Homepage: http://mp3gain.sourceforge.net/
 Standards-Version: 3.9.5

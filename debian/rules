@@ -38,7 +38,7 @@ clean:
 	$(MAKE) clean
 	rm -f debian/mp3gain.1
 
-	dh_clean 
+	dh_clean
 
 install: build
 	dh_testdir
@@ -57,7 +57,7 @@ binary-indep: build install
 binary-arch: build install
 	dh_testdir
 	dh_testroot
-	dh_installchangelogs 
+	dh_installchangelogs
 	dh_installdocs debian/README.method
 	dh_installman debian/mp3gain.1
 	dh_link

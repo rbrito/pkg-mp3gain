@@ -121,11 +121,11 @@ mp3gain (1.4.6-8) unstable; urgency=medium
 
   * Rebuild with non-buggy gcc. This fixes mp3gain giving wrong results on
     i386 (closes: #519949).
-  * Fix lintian warnings: 
+  * Fix lintian warnings:
     - Bump standards version:
       + Add homepage to debian/control.
       + Add README.source.
-    - Use UTF8 for debian/copyright. 
+    - Use UTF8 for debian/copyright.
     - Switch to debhelper compatibility level 7.
 
  -- Stefan Fritsch <sf@debian.org>  Mon, 23 Mar 2009 11:51:58 +0100
@@ -206,5 +206,3 @@ mp3gain (1.4.3-1) unstable; urgency=low
   * Initial Upload sponsored by Joachim Breitner; Closes: #241748: ITP
 
  -- Stefan Fritsch <sfritsch@ph.tum.de>  Thu, 15 Apr 2004 23:12:05 +0200
-
-
